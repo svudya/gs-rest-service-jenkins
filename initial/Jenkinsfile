@@ -1,0 +1,10 @@
+pipeline {
+    agent { docker { image 'maven_img' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
+}
